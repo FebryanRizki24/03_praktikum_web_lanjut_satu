@@ -44,9 +44,7 @@ Route::get('/news', function () {
 });
 
 Route::prefix('')->group(function(){
-    Route::get('/program', function(){
-        return view('program');
-    });
+    Route::get('/program', [App\Http\Controllers\ProgramController::class, 'index'])->name('program');
 });
 
 Route::get('/about-us', function(){

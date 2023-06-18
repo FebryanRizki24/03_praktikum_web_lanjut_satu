@@ -18,5 +18,10 @@
 
     @parent
     <h1>Ini halaman Program</h1>
+    <hr>
+    @foreach ($dataProgram as $d)
+        <td>{{ $d->nama }}</td>
+        <td>{{ $d->tanggal }}</td>
+    @endforeach
 
 @endsection
