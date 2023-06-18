@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,4 +8,15 @@
     <body>
         <h1>Ini Halaman Contact</h1>
     </body>
-</html>
+</html> -->
+
+@extends('layouts.app')
+
+@section('titlePage', 'home')
+
+@section('content')
+
+    @parent
+    <h1>Ini halaman Contact</h1>
+
+@endsection

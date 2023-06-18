@@ -15,19 +15,22 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('home2');
 });
 
-Route::prefix('/product')->group(function () {
+Route::prefix('/product')->name('product')->group(function () {
+    Route::get('', function(){
+        return view('product.product');
+    });
     Route::get('/edu', function(){
         return view('product.edu',['nama' => 'marbel-edu-games']);
     });
